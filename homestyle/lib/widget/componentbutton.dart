@@ -4,6 +4,7 @@ class CustomButton extends StatelessWidget {
   final String title;
   final Color backgroundColor;
   final double borderRadius;
+  final Color textColor;
   final VoidCallback onPressed;
 
   const CustomButton({
@@ -12,6 +13,7 @@ class CustomButton extends StatelessWidget {
     required this.onPressed,
     this.backgroundColor = Colors.blue,
     this.borderRadius = 4,
+    this.textColor = Colors.white,
   });
 
   @override
@@ -27,7 +29,10 @@ class CustomButton extends StatelessWidget {
           ),
         ),
         onPressed: onPressed,
-        child: Text(title),
+        child: Text(
+          title,
+          style: TextStyle(color:Colors.white),
+        ),
       ),
     );
   }
