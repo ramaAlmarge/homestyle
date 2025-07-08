@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:homestyle/core/resources/asset_manager.dart';
 import 'package:homestyle/core/resources/color_manager.dart';
 import 'package:homestyle/core/resources/string.dart';
@@ -65,6 +66,15 @@ Padding(
                             },
                             controller: email,
                             decoration: InputDecoration(
+                             suffixIcon: Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: SvgPicture.asset(
+                                  'assets/icons/baseline-keyboard_arrow_down-24px.svg',
+                                  width: 24,
+                                  height: 24,
+                                  fit: BoxFit.scaleDown,
+                                ),
+                              ),
                               border: OutlineInputBorder(),
                               errorBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(color: Colors.red),
@@ -82,6 +92,15 @@ Padding(
                             },
                             controller: password,
                             decoration: InputDecoration(
+                               suffixIcon: Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: SvgPicture.asset(
+                                  'assets/icons/eye 1.svg',
+                                  width: 24,
+                                  height: 24,
+                                  fit: BoxFit.scaleDown,
+                                ),
+                              ),
                               border: OutlineInputBorder(),
                               labelText: 'Password',
                             ),
@@ -89,38 +108,12 @@ Padding(
                           SizedBox(height: 10,),
                           TextButton(onPressed: () {}, child: Text('Forgot password')),
                           SizedBox(height: 10),
-                      //  ElevatedButton(
-                      //       style: ElevatedButton.styleFrom(
-                      //         backgroundColor: Colorprimary.primarycolor,
-                      //         shape: RoundedRectangleBorder(
-                      //           borderRadius: BorderRadius.circular(4),
-                      //         ),
-                      //       ),
-                      //       onPressed: () {
-                                  
-                      //         if (formKey.currentState!.validate()) {
-                      //           Navigator.pushReplacement(
-                      //             context,
-                      //             MaterialPageRoute(builder: (context) => Signup()),
-                      //           );
-                      //         } else {
-                      //           ScaffoldMessenger.of(context).showSnackBar(
-                      //             SnackBar(
-                      //               content: Text('Invalid Infromation'),
-                      //               backgroundColor: Colors.red,
-                      //             ),
-                      //           );
-                      //         }
-                      //       },
-                            
-                      //       child: const Text("sign in"),
-                      //     ),
 CustomButton(
                             title: 'Log in',
                             backgroundColor: Colorprimary.primarycolor,
                             onPressed: () {
                               if (formKey.currentState!.validate()) {
-                                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Homepage()));
+                                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
                               } else {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
@@ -131,7 +124,10 @@ CustomButton(
                               }
                             },
                           ),
-                          TextButton(onPressed: () {}, child: Text('sign up')),
+                          TextButton(onPressed: () {
+Navigator.pushNamed(context, '/Signup');
+
+                          }, child: Text('sign up')),
                         ],
                       ),
                     ),
