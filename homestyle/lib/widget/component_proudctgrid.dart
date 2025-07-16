@@ -12,22 +12,22 @@ class ProductGrid extends StatelessWidget {
       ProductModel(
         name: 'Black Simple lamp',
         price: 12.00,
-        image: 'assets/images/background.png',
+        image: 'assets/images/jonny-caspari-wsvCC6UyKjs-unsplash 1.png',
       ),
       ProductModel(
         name: 'Minimal Stand',
         price: 25.00,
-        image: 'assets/images/background.png',
+        image: 'assets/images/jonny-caspari-wsvCC6UyKjs-unsplash 1.png',
       ),
       ProductModel(
         name: 'Coffee Chair',
         price: 12.00,
-        image: 'assets/images/background.png',
+        image: 'assets/images/jonny-caspari-wsvCC6UyKjs-unsplash 1.png',
       ),
       ProductModel(
         name: 'Simple Desk',
         price: 25.00,
-        image: 'assets/images/background.png',
+        image: 'assets/images/jonny-caspari-wsvCC6UyKjs-unsplash 1.png',
       ),
     ];
 

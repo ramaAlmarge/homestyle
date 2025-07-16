@@ -4,7 +4,7 @@ import 'package:homestyle/core/resources/asset_manager.dart';
 import 'package:homestyle/core/resources/color_manager.dart';
 import 'package:homestyle/core/resources/string.dart';
 import 'package:homestyle/views/homepage.dart';
-import 'package:homestyle/views/signup.dart';
+
 import 'package:homestyle/widget/componentbutton.dart';
 
 class login extends StatefulWidget {
@@ -15,27 +15,32 @@ class login extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<login> {
-   final TextEditingController email = TextEditingController();
+  final TextEditingController email = TextEditingController();
   final TextEditingController password = TextEditingController();
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        
         children: [
-          Align(alignment: Alignment.bottomCenter,),
-Image.asset(Assetmanager.pattern),
-SizedBox(height: 12,),
-Text(Stringtext.HelloWELCOMEBACK),
-SizedBox(height: 30,),
-Padding(
-  padding: const EdgeInsets.all(20),
-  child: Container(
-    width: 327,
-    height: 396,
-    decoration: BoxDecoration(
-  color: Colors.white,
+          Align(
+            alignment: Alignment.bottomCenter,
+          ),
+          Image.asset(Assetmanager.pattern),
+          SizedBox(
+            height: 12,
+          ),
+          Text(Stringtext.HelloWELCOMEBACK),
+          SizedBox(
+            height: 30,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Container(
+              width: 327,
+              height: 396,
+              decoration: BoxDecoration(
+                color: Colors.white,
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black.withOpacity(0.1),
@@ -43,12 +48,12 @@ Padding(
                     offset: const Offset(0, 4),
                   ),
                 ],
-    ),
-    
-    child: Padding(
-      padding: const EdgeInsets.all(30),
-      child: Column(children: [
-         Form(
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(30),
+                child: Column(
+                  children: [
+                    Form(
                       key: formKey,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -61,12 +66,12 @@ Padding(
                               if (!emailValid) {
                                 return 'invalid Email, please enter your correct infromation';
                               }
-      
+
                               return null;
                             },
                             controller: email,
                             decoration: InputDecoration(
-                             suffixIcon: Padding(
+                              suffixIcon: Padding(
                                 padding: const EdgeInsets.all(12.0),
                                 child: SvgPicture.asset(
                                   'assets/icons/baseline-keyboard_arrow_down-24px.svg',
@@ -92,7 +97,7 @@ Padding(
                             },
                             controller: password,
                             decoration: InputDecoration(
-                               suffixIcon: Padding(
+                              suffixIcon: Padding(
                                 padding: const EdgeInsets.all(12.0),
                                 child: SvgPicture.asset(
                                   'assets/icons/eye 1.svg',
@@ -105,12 +110,14 @@ Padding(
                               labelText: 'Password',
                             ),
                           ),
-                          SizedBox(height: 10,),
+                          SizedBox(
+                            height: 10,
+                          ),
                           TextButton(onPressed: () {}, child: Text('Forgot password')),
                           SizedBox(height: 10),
-CustomButton(
+                          CustomButton(
                             title: 'Log in',
-                            backgroundColor: Colorprimary.primarycolor,
+                            backgroundColor: Colormanager.primarycolor,
                             onPressed: () {
                               if (formKey.currentState!.validate()) {
                                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
@@ -124,23 +131,21 @@ CustomButton(
                               }
                             },
                           ),
-                          TextButton(onPressed: () {
-Navigator.pushNamed(context, '/Signup');
-
-                          }, child: Text('sign up')),
+                          TextButton(
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/signup');
+                              },
+                              child: Text('sign up')),
                         ],
                       ),
                     ),
-        
-      ],),
-    ),
-  ),
-)
-,
-
-      ],),
-
-      
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
