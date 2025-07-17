@@ -4,6 +4,7 @@ class Assetmanager {
    static const String logo= "assets/images/Logo.png";
    static const String pattern = "assets/images/pattern.png";
    static const String imageappbar = "assets/images/Content.png";
+   static const String logeDhl = "assets/images/logo_dhl.jpg";
     static const String chair = "assets/images/jonny-caspari-wsvCC6UyKjs-unsplash 1.png";
     static const String emailIcon = 'assets/icons/email.svg';
   static const String passwordIcon = 'assets/icons/password.svg';

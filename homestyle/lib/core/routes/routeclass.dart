@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homestyle/views/SUCCESS_PAGE.dart';
 import 'package:homestyle/views/cart_page.dart';
 import 'package:homestyle/views/check_outpage.dart';
 import 'package:homestyle/views/favoritepage.dart';
@@ -20,5 +21,6 @@ class AppRoutes {
     '/cart': (context) => const CartPage(),
 '/checkout': (context) => const CheckOut1(),
     '/notifications': (context) => const NotificationPage(), // ✅
+    '/success': (context) => const SuccessPage(),
   };
 }
