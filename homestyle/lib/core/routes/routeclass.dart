@@ -6,7 +6,9 @@ import 'package:homestyle/views/favoritepage.dart';
 import 'package:homestyle/views/homepage.dart';
 import 'package:homestyle/views/login_page.dart';
 import 'package:homestyle/views/onboarding.dart';
+import 'package:homestyle/views/order_page.dart';
 import 'package:homestyle/views/profile_page.dart';
+import 'package:homestyle/views/rating_page.dart';
 import 'package:homestyle/views/signup.dart';
 import 'package:homestyle/views/notification_page.dart'; // ✅ إذا عندك صفحة إشعارات
 
@@ -19,8 +21,10 @@ class AppRoutes {
     '/favorites': (context) => const FavoritesPage(),
     '/profile': (context) => const ProfilePage(),
     '/cart': (context) => const CartPage(),
-'/checkout': (context) => const CheckOut1(),
+    '/checkout': (context) => const CheckOut1(),
     '/notifications': (context) => const NotificationPage(), // ✅
     '/success': (context) => const SuccessPage(),
+    '/Orderpage': (context) => const Orderpage(),
+    // '/ReviewPage': (context) =>  ReviewPage(),
   };
 }

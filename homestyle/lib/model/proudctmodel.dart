@@ -10,4 +10,7 @@ class ProductModel {
     required this.price,
     this.isFavorite = false,
   });
+
+  get size => null;
 }
+//TODO 

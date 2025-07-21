@@ -4,6 +4,7 @@ import 'package:homestyle/core/resources/asset_manager.dart';
 import 'package:homestyle/core/resources/color_manager.dart';
 import 'package:homestyle/model/proudctmodel.dart';
 import 'package:homestyle/views/favoritepage.dart';
+import 'package:homestyle/views/rating_page.dart';
 import 'package:homestyle/widget/componentbutton.dart';
 
 class ProductDetailsPage extends StatefulWidget {
@@ -176,16 +177,28 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                     ],
                   ),
                   const SizedBox(height: 12),
-                  Row(
-                    children: const [
-                      Icon(Icons.star, color: Colors.orange, size: 20),
-                      SizedBox(width: 8),
-                      Text(
+               Row(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                         Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ReviewPage(product: widget.product),
+                            ),
+                          );
+
+                        },
+                        child: const Icon(Icons.star, color: Colors.orange, size: 20),
+                      ),
+                      const SizedBox(width: 8),
+                      const Text(
                         '4.5 (50 reviews)',
                         style: TextStyle(color: Colors.grey),
                       ),
                     ],
                   ),
+
                   const SizedBox(height: 16),
                   const Text(
                     'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now.',
