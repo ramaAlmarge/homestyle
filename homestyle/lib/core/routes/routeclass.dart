@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:homestyle/views/SUCCESS_PAGE.dart';
+import 'package:homestyle/views/addshippingadress.dart';
 import 'package:homestyle/views/cart_page.dart';
 import 'package:homestyle/views/check_outpage.dart';
 import 'package:homestyle/views/favoritepage.dart';
@@ -7,8 +8,11 @@ import 'package:homestyle/views/homepage.dart';
 import 'package:homestyle/views/login_page.dart';
 import 'package:homestyle/views/onboarding.dart';
 import 'package:homestyle/views/order_page.dart';
+import 'package:homestyle/views/paymantmethod_page.dart';
 import 'package:homestyle/views/profile_page.dart';
 import 'package:homestyle/views/rating_page.dart';
+import 'package:homestyle/views/setting_page.dart';
+import 'package:homestyle/views/shippingadrress_page.dart';
 import 'package:homestyle/views/signup.dart';
 import 'package:homestyle/views/notification_page.dart'; // ✅ إذا عندك صفحة إشعارات
 
@@ -25,6 +29,11 @@ class AppRoutes {
     '/notifications': (context) => const NotificationPage(), // ✅
     '/success': (context) => const SuccessPage(),
     '/Orderpage': (context) => const Orderpage(),
+    '/ShippingAdreessPage': (context) => ShippingAdreessPage(),
+    
+    '/PaymantMethod': (context) => const PaymantMethod(),
     // '/ReviewPage': (context) =>  ReviewPage(),
+    '/SettingPage': (context) => const SettingPage(),
+    '/AddShippingAddressPage': (context) => AddShippingAddressPage(),
   };
 }
