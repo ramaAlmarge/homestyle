@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:homestyle/views/SUCCESS_PAGE.dart';
+import 'package:homestyle/views/addpayment_page.dart';
 import 'package:homestyle/views/addshippingadress.dart';
 import 'package:homestyle/views/cart_page.dart';
 import 'package:homestyle/views/check_outpage.dart';
 import 'package:homestyle/views/favoritepage.dart';
 import 'package:homestyle/views/homepage.dart';
 import 'package:homestyle/views/login_page.dart';
+import 'package:homestyle/views/myreview_page.dart';
 import 'package:homestyle/views/onboarding.dart';
 import 'package:homestyle/views/order_page.dart';
 import 'package:homestyle/views/paymantmethod_page.dart';
@@ -31,9 +33,11 @@ class AppRoutes {
     '/Orderpage': (context) => const Orderpage(),
     '/ShippingAdreessPage': (context) => ShippingAdreessPage(),
     
-    '/PaymantMethod': (context) => const PaymantMethod(),
+    '/PaymantMethod': (context) =>  PaymantMethod(),
     // '/ReviewPage': (context) =>  ReviewPage(),
     '/SettingPage': (context) => const SettingPage(),
     '/AddShippingAddressPage': (context) => AddShippingAddressPage(),
+     '/Addpaymentpage': (context) => const Addpaymentpage(),
+     '/myReviews': (context) => const MyReviewsPage(),
   };
 }

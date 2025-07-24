@@ -39,6 +39,8 @@ class ProfilePage extends StatelessWidget {
                   title: 'My reviews',
                   subtitle: 'Reviews for 5 items',
                   // ما في تنقل هون حسب التصميم
+                 onTap: ()=> Navigator.pushNamed(context, '/myReviews'),
+
                 ),
                 ProfileListTile(
                   title: 'Setting',
